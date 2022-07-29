@@ -4,7 +4,7 @@ from .utils import ImageToAudio
 image_to_audio_obj = ImageToAudio()
 
 
-class LitImgToAudio(L.LightningWork):
+class LitImgToAudio(L.LightningFlow):
     def __init__(self) -> None:
         super().__init__()
         self.output_audio_file_path = ''

@@ -10,7 +10,7 @@ class LitImgToAudio(L.LightningWork):
         self.output_audio_file_path = ''
         self.error_message = None
 
-    def run(self, image_np_array):
+    def run(self, image_np_array,  *args, **kwargs):
         image_to_audio_obj.predict(image_np_array)
         self.output_audio_file_path = image_to_audio_obj.output_audio_file_path
         self.error_message = image_to_audio_obj.error_message
